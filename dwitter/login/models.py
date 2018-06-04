@@ -24,7 +24,7 @@ class Likes(models.Model):
 class Follower(models.Model):
     Fol_Id = models.ForeignKey(User,on_delete = models.CASCADE)
     time = models.DateTimeField()
-    follower_no = models.ManyToManyField('self', related_name='follows', symmetrical=False)
+    n_follower = models.ManyToManyField('self', related_name='follows', symmetrical=False)
 
 class Comment(models.Model):
     user_id = models.ForeignKey(User,on_delete = models.CASCADE)
